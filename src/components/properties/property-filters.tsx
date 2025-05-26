@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
+import clsx from "clsx"
 
 interface Filters {
   search: string
@@ -57,7 +58,7 @@ export default function PropertyFilters({
           placeholder="Search properties..."
           value={filters.search}
           onChange={(e) => handleFilterChange("search", e.target.value)}
-          className="pl-10"
+          className="pl-10 border border-yellow-200 shadow-sm focus:ring-yellow-300 focus:border-yellow-400 transition"
         />
       </div>
 
@@ -66,19 +67,19 @@ export default function PropertyFilters({
         <Button
           variant="outline"
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center"
+          className="flex items-center border-yellow-200 hover:bg-yellow-50 transition"
         >
           <Filter className="h-4 w-4 mr-2" />
           Filters
           {activeFiltersCount > 0 && (
-            <Badge variant="secondary" className="ml-2">
+            <Badge variant="secondary" className="ml-2 bg-yellow-100 text-yellow-800 border border-yellow-300">
               {activeFiltersCount}
             </Badge>
           )}
         </Button>
 
         {activeFiltersCount > 0 && (
-          <Button variant="ghost" onClick={onClearFilters} size="sm">
+          <Button variant="ghost" onClick={onClearFilters} size="sm" className="text-yellow-600 hover:bg-yellow-50">
             <X className="h-4 w-4 mr-1" />
             Clear All
           </Button>
@@ -87,110 +88,118 @@ export default function PropertyFilters({
 
       {/* Filters Panel */}
       {isOpen && (
-        <Card>
+        <Card className="border border-yellow-100 shadow-md shadow-yellow-100 transition rounded-xl">
           <CardHeader>
-            <CardTitle>Filter Properties</CardTitle>
+            <CardTitle className="text-yellow-700 font-semibold">Filter Properties</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             {/* Category */}
-            <div>
-              <label className="block text-sm font-medium mb-2">Category</label>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                {categories.map((category) => (
-                  <Button
-                    key={category}
-                    variant={filters.category === category || (category === "All" && !filters.category) ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => handleFilterChange("category", category === "All" ? "" : category)}
-                  >
-                    {category}
-                  </Button>
-                ))}
-              </div>
-            </div>
+            <FilterGroup 
+              label="Category" 
+              options={categories} 
+              selected={filters.category} 
+              onChange={(val) => handleFilterChange("category", val)} 
+            />
 
             {/* Status */}
-            <div>
-              <label className="block text-sm font-medium mb-2">Status</label>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                {statuses.map((status) => (
-                  <Button
-                    key={status}
-                    variant={filters.status === status || (status === "All" && !filters.status) ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => handleFilterChange("status", status === "All" ? "" : status)}
-                  >
-                    {status}
-                  </Button>
-                ))}
-              </div>
-            </div>
+            <FilterGroup 
+              label="Status" 
+              options={statuses} 
+              selected={filters.status} 
+              onChange={(val) => handleFilterChange("status", val)} 
+            />
 
             {/* Price Range */}
             <div>
-              <label className="block text-sm font-medium mb-2">Price Range</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
               <div className="grid grid-cols-2 gap-2">
                 <Input
                   placeholder="Min Price"
                   type="number"
                   value={filters.minPrice}
                   onChange={(e) => handleFilterChange("minPrice", e.target.value)}
+                  className="border-yellow-200 shadow-sm"
                 />
                 <Input
                   placeholder="Max Price"
                   type="number"
                   value={filters.maxPrice}
                   onChange={(e) => handleFilterChange("maxPrice", e.target.value)}
+                  className="border-yellow-200 shadow-sm"
                 />
               </div>
             </div>
 
             {/* Bedrooms */}
-            <div>
-              <label className="block text-sm font-medium mb-2">Bedrooms</label>
-              <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
-                {bedroomOptions.map((bedroom) => (
-                  <Button
-                    key={bedroom}
-                    variant={filters.bedrooms === bedroom || (bedroom === "Any" && !filters.bedrooms) ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => handleFilterChange("bedrooms", bedroom === "Any" ? "" : bedroom)}
-                  >
-                    {bedroom}
-                  </Button>
-                ))}
-              </div>
-            </div>
+            <FilterGroup 
+              label="Bedrooms" 
+              options={bedroomOptions} 
+              selected={filters.bedrooms} 
+              onChange={(val) => handleFilterChange("bedrooms", val)} 
+              gridCols="grid-cols-3 md:grid-cols-6"
+            />
 
             {/* Bathrooms */}
-            <div>
-              <label className="block text-sm font-medium mb-2">Bathrooms</label>
-              <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
-                {bathroomOptions.map((bathroom) => (
-                  <Button
-                    key={bathroom}
-                    variant={filters.bathrooms === bathroom || (bathroom === "Any" && !filters.bathrooms) ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => handleFilterChange("bathrooms", bathroom === "Any" ? "" : bathroom)}
-                  >
-                    {bathroom}
-                  </Button>
-                ))}
-              </div>
-            </div>
+            <FilterGroup 
+              label="Bathrooms" 
+              options={bathroomOptions} 
+              selected={filters.bathrooms} 
+              onChange={(val) => handleFilterChange("bathrooms", val)} 
+              gridCols="grid-cols-3 md:grid-cols-5"
+            />
 
             {/* Location */}
             <div>
-              <label className="block text-sm font-medium mb-2">Location</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
               <Input
                 placeholder="Enter location..."
                 value={filters.location}
                 onChange={(e) => handleFilterChange("location", e.target.value)}
+                className="border-yellow-200 shadow-sm"
               />
             </div>
           </CardContent>
         </Card>
       )}
+    </div>
+  )
+}
+
+function FilterGroup({
+  label,
+  options,
+  selected,
+  onChange,
+  gridCols = "grid-cols-2 md:grid-cols-3"
+}: {
+  label: string
+  options: string[]
+  selected: string
+  onChange: (val: string) => void
+  gridCols?: string
+}) {
+  return (
+    <div>
+      <label className="block text-sm font-medium text-gray-700 mb-2">{label}</label>
+      <div className={clsx("grid gap-2", gridCols)}>
+        {options.map((option) => {
+          const isSelected = selected === option || (option === "All" || option === "Any") && !selected
+          return (
+            <Button
+              key={option}
+              variant={isSelected ? "default" : "outline"}
+              size="sm"
+              onClick={() => onChange(option === "All" || option === "Any" ? "" : option)}
+              className={clsx(
+                "transition",
+                isSelected ? "bg-yellow-500 hover:bg-yellow-600 text-white" : "border-yellow-100 hover:bg-yellow-50"
+              )}
+            >
+              {option}
+            </Button>
+          )
+        })}
+      </div>
     </div>
   )
 }
