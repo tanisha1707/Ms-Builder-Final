@@ -104,12 +104,35 @@ function PropertiesContent() {
 
   return (
     <div className="container mx-auto px-4 py-12 page-transition">
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">All Properties</h1>
-        <p className="text-muted-foreground">
-          Discover {pagination.total} premium properties across different categories
-        </p>
-      </div>
+      <section className="w-full px-6 pt-0 md:pt-0 pb-12 bg-white mb-12">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    
+    {/* Text Content */}
+    <div className="md:w-1/2">
+      <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-12">
+        <span className="text-black">Premium Properties Listing by </span>
+        <span className="text-yellow-500 drop-shadow-md">MS Builder</span>
+      </h1>
+      <p className="text-gray-700 text-base md:text-lg mb-8">
+        Explore an extensive range of <span className="text-yellow-600 font-semibold">residential</span> and <span className="text-yellow-600 font-semibold">commercial properties</span> tailored for every lifestyle and investment need. From luxurious villas to modern office spaces—find it all in one place.
+      </p>
+      <p className="text-gray-700 text-base md:text-lg">
+        MS Builder ensures <span className="text-black font-medium">trusted ownership</span>, <span className="text-black font-medium">transparent pricing</span>, and <span className="text-yellow-600 font-semibold">prime locations</span>—your dream property is just a click away.
+      </p>
+    </div>
+
+    {/* Image */}
+    <div className="md:w-1/2 flex justify-center">
+      <img 
+        src="/images/properties-hero.jpg" 
+        alt="For Sale Sign in Front of Property" 
+        className="w-full max-w-md rounded-xl shadow-[0_0_25px_rgba(234,179,8,0.5)] transition-transform duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(232,179,8,0.7)] object-cover"
+      />
+    </div>
+  </div>
+</section>
+
+
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Filters Sidebar */}
