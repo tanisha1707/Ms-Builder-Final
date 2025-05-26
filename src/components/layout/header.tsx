@@ -41,28 +41,30 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <div className="relative h-12 w-48 transform transition-transform duration-300 hover:scale-105">
-              <Image 
-                src="/images/logo.png" 
-                alt="MSBUILDER'S Logo" 
-                fill 
-                className="object-contain"
-                priority
-                onError={(e) => {
-                  e.currentTarget.style.display = "none"
-                  const nextSibling = e.currentTarget.nextSibling
-                  if (nextSibling instanceof HTMLElement) {
-                    nextSibling.classList.remove("hidden")
-                  }
-                }}
-              />
-              <span
-                className="hidden absolute inset-0 items-center justify-center text-2xl font-playfair text-yellow-500"
-              >
-                MSBUILDERS
-              </span>
-            </div>
-          </Link>
+  <div className="relative h-14 w-14 rounded-full bg-white shadow-md p-1 transition-transform duration-300 hover:scale-110 group">
+    <Image 
+      src="/images/logo.jpeg" 
+      alt="MSBUILDER'S Logo"
+      layout="fill"
+      className="object-cover rounded-full group-hover:opacity-90 transition-opacity duration-300"
+      priority
+      onError={(e) => {
+        e.currentTarget.style.display = "none"
+        const nextSibling = e.currentTarget.nextSibling
+        if (nextSibling instanceof HTMLElement) {
+          nextSibling.classList.remove("hidden")
+        }
+      }}
+    />
+    <span className="hidden absolute inset-0 flex items-center justify-center text-sm font-semibold text-yellow-500">
+      MSBUILDERS
+    </span>
+  </div>
+  <span className="ml-3 text-xl font-bold text-yellow-600 tracking-wide hidden md:inline-block">
+    MSBUILDERS
+  </span>
+</Link>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -84,13 +86,11 @@ export default function Header() {
               asChild
               className="px-8 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold transform transition-transform duration-300 hover:scale-105"
             >
-              <Link href="/contact">
-                Get Started
-              </Link>
+              <Link href="/contact">Get Started</Link>
             </Button>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <button
             className="md:hidden text-black"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -119,9 +119,7 @@ export default function Header() {
                 asChild
                 className="w-fit px-8 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold transform transition-transform duration-300 hover:scale-105"
               >
-                <Link href="/contact">
-                  Get Started
-                </Link>
+                <Link href="/contact">Get Started</Link>
               </Button>
             </div>
           </nav>
