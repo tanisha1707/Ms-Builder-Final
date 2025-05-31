@@ -3,6 +3,7 @@
 
 import { usePathname } from "next/navigation"
 import MainLayout from "./main-layout"
+import WhatsappChatButton from "@/components/WhatsappChat"
 
 interface LayoutProviderProps {
   children: React.ReactNode
@@ -23,6 +24,7 @@ export default function LayoutProvider({ children }: LayoutProviderProps) {
   return (
     <MainLayout>
       {children}
+      <WhatsappChatButton />
     </MainLayout>
   )
 }
