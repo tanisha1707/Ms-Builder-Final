@@ -52,20 +52,19 @@ export default function PropertyForm({ property, isEditing = false }: PropertyFo
   const statuses = ["Available", "Sold", "Rented", "Pending"]
 
   const predefinedFeatures = [
-    "Hardwood Floors", "Central Air", "Balcony", "Fireplace", "Walk-in Closet",
-    "High Ceilings", "Stainless Steel Appliances", "Granite Countertops", "Skylights",
-    "Vaulted Ceilings", "Bay Windows", "Patio", "Deck", "Fenced Yard", "Sprinkler System",
-    "Security System", "Smart Home Features", "Energy-Efficient Windows", "Radiant Heating",
-    "Breakfast Nook", "Home Office", "Mudroom", "Laundry Room", "Pantry", "Wet Bar"
+    "Modular Kitchen", "Private Garden", "Central Air", "Balcony", "Fireplace", "Pooja Room",
+    "Stainless Steel Appliances", "Granite Countertops",
+    "Security System", "Smart Home Features","Lift",
+     "Home Office","Fire Safety Systems", "Store Room"
   ]
 
   const predefinedAmenities = [
-    "Swimming Pool", "Gym", "Parking", "Elevator", "Doorman", "Concierge",
-    "Clubhouse", "Playground", "Tennis Court", "Basketball Court", "Sauna",
+    "Swimming Pool", "CCTV surveillance","Gym", "Parking", "Wi-Fi", "Banquet Hall",
+    "Elevator", "Clubhouse","Playground", "Tennis Court", "Basketball Court", 
     "Hot Tub", "Rooftop Terrace", "BBQ Area", "Bike Storage", "Pet Park",
     "Community Garden", "Guest Suite", "On-Site Laundry", "Storage Units",
-    "Electric Vehicle Charging", "Business Center", "Movie Theater", "Yoga Studio",
-    "Game Room"
+    "Electric Vehicle Charging","Movie Theater", "Yoga Studio",
+    "Game Room","Indoor Games"
   ]
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

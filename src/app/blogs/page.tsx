@@ -95,14 +95,14 @@ function BlogsContent() {
   const hasActiveFilters = searchTerm || selectedCategory
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-craterbrown mb-4">
             Real Estate Blog
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-craterbrown max-w-2xl mx-auto">
             Stay updated with the latest real estate trends, market insights, and expert advice 
             from our professional team.
           </p>
@@ -110,7 +110,7 @@ function BlogsContent() {
 
         {/* Search and Filters */}
         <Card className="mb-12 shadow-sm">
-          <CardContent className="p-6 bg-white">
+          <CardContent className="p-6 ">
             {/* Search Bar */}
             <form onSubmit={handleSearch} className="mb-6">
               <div className="relative max-w-md mx-auto">
@@ -119,12 +119,12 @@ function BlogsContent() {
                   placeholder="Search blog posts..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 pr-20 border-gray-300 focus:border-yellow-500 focus:ring-yellow-500"
+                  className="pl-10 pr-20  focus:border-yellow-500 focus:ring-yellow-500"
                 />
                 <Button 
                   type="submit" 
                   size="sm" 
-                  className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-yellow-500 hover:bg-yellow-600 text-black"
+                  className="absolute border-cadetblue right-1 top-1/2 transform -translate-y-1/2 bg-yellow-500 hover:bg-yellow-600 text-black"
                 >
                   Search
                 </Button>
