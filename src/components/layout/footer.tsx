@@ -24,22 +24,14 @@ export default function Footer() {
               MSBUILDER&apos;S is a premium real estate company dedicated to finding the perfect property for you. 
               With years of experience, we help you make the best investment decisions.
             </p>
-            <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
+            <div className="flex space-x-4 justify-center">
+              <Link href=" https://www.facebook.com/profile.php?id=61576939058032" className="text-gray-400 hover:text-primary transition-colors">
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Linkedin size={20} />
-                <span className="sr-only">LinkedIn</span>
               </Link>
             </div>
           </div>

@@ -11,13 +11,13 @@ interface LatestBlogsSectionProps {
 
 const LatestBlogsSection = ({ blogs }: LatestBlogsSectionProps) => {
   return (
-    <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+    <section className="py-20 text-craterbrown">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-craterbrown mb-6 tracking-tight">
             Explore Our Latest Blogs
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-craterbrown-300 max-w-2xl mx-auto leading-relaxed">
             Stay updated with expert insights, tips, and real estate trends to guide your property journey.
           </p>
         </div>

@@ -22,7 +22,7 @@ export default function AboutSection() {
   ]
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
@@ -48,17 +48,17 @@ export default function AboutSection() {
 
           {/* Content Section */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6 tracking-tight">
-              About <span className="text-yellow-500">MSBUILDER&apos;S</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-CraterBrown mb-6 tracking-tight">
+              About <span className="text-craterbrown">MSBUILDER&apos;S</span>
             </h2>
             
-            <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            <p className="text-lg text-craterbrown mb-6 leading-relaxed">
               MSBUILDER&apos;S is a premier real estate company with over 15 years of
               experience in the industry. We specialize in helping clients find the perfect
               properties—whether it&apos;s a new home, investment opportunity, or commercial space.
             </p>
             
-            <p className="text-gray-300 mb-8 leading-relaxed">
+            <p className="text-craterbrown mb-8 leading-relaxed">
               Our team of expert real estate professionals is committed to providing
               outstanding service and guidance throughout every step of your real estate journey.
               We believe in building lasting relationships based on trust, integrity, and results.
@@ -68,7 +68,7 @@ export default function AboutSection() {
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start">
                   <Check className="h-5 w-5 text-yellow-500 mr-3 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300">{feature}</p>
+                  <p className="text-craterbrown">{feature}</p>
                 </div>
               ))}
             </div>
@@ -90,12 +90,12 @@ export default function AboutSection() {
           {stats.map((stat, index) => (
             <Card
               key={index}
-              className="text-center bg-white/10 backdrop-blur-sm border-gray-200 transform transition-transform duration-300 hover:scale-105"
+              className="text-center bg-white/10 backdrop-blur-sm border-cadetblue transform transition-transform duration-300 hover:scale-105"
             >
               <CardContent className="p-6">
                 <stat.icon className="h-8 w-8 text-yellow-500 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-yellow-500 mb-2">{stat.value}</div>
-                <div className="text-sm text-gray-300">{stat.label}</div>
+                <div className="text-sm text-craterbrown">{stat.label}</div>
               </CardContent>
             </Card>
           ))}

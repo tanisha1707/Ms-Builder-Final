@@ -11,6 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        akaroa: '#ddc8ae',
+        craterbrown: '#281718',
+        portica: '#fce162',
+        cadetblue: '#a4acbc',
+        loafer: '#f4f7e4',
       },
     },
   },

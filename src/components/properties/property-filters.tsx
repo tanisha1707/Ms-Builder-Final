@@ -58,7 +58,7 @@ export default function PropertyFilters({
           placeholder="Search properties..."
           value={filters.search}
           onChange={(e) => handleFilterChange("search", e.target.value)}
-          className="pl-10 border border-yellow-200 shadow-sm focus:ring-yellow-300 focus:border-yellow-400 transition"
+          className="pl-10 border border-cadetblue shadow-sm focus:ring-yellow-300 focus:border-cadetblue transition"
         />
       </div>
 
@@ -67,7 +67,7 @@ export default function PropertyFilters({
         <Button
           variant="outline"
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center border-yellow-200 hover:bg-yellow-50 transition"
+          className="flex items-center border-cadetblue hover:bg-yellow-50 transition"
         >
           <Filter className="h-4 w-4 mr-2" />
           Filters

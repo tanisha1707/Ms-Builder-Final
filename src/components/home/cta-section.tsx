@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button"
 
 export default function CTASection() {
   return (
-    <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+    <section className="py-20 text- craterbrown">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text- craterbrown mb-6 tracking-tight">
             Ready to Find Your Perfect Property?
           </h2>
           
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text- craterbrown-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             Let our expert team help you discover the ideal property that matches 
             your lifestyle and investment goals. Get started today!
           </p>
@@ -32,7 +32,7 @@ export default function CTASection() {
               asChild
               variant="outline"
               size="lg"
-              className="px-8 bg-transparent border-2 border-gray-300 text-gray-300 hover:bg-gray-200 hover:text-black transition-all duration-300 transform hover:scale-105"
+              className="px-8 bg-transparent border-2 border-gray-300 text- craterbrown-300 hover:bg-gray-200 hover:text-black transition-all duration-300 transform hover:scale-105"
             >
               <Link href="/contact">
                 Schedule Consultation
@@ -44,16 +44,16 @@ export default function CTASection() {
             <div className="flex items-center justify-center space-x-3">
               <Phone className="h-6 w-6 text-yellow-500" />
               <div>
-                <div className="font-semibold text-gray-300">Call Us</div>
-                <div className="text-gray-300">+1 (555) 123-4567</div>
+                <div className="font-semibold text-craterbrown-300">Call Us</div>
+                <div className="text-craterbrown-300">+1 (555) 123-4567</div>
               </div>
             </div>
             
             <div className="flex items-center justify-center space-x-3">
               <Mail className="h-6 w-6 text-yellow-500" />
               <div>
-                <div className="font-semibold text-gray-300">Email Us</div>
-                <div className="text-gray-300">info@msbuilders.com</div>
+                <div className="font-semibold text-craterbrown-300">Email Us</div>
+                <div className="text-craterbrown-300">info@msbuilders.com</div>
               </div>
             </div>
           </div>

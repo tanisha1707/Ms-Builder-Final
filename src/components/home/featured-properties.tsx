@@ -33,13 +33,13 @@ export default function FeaturedProperties() {
   }, [])
 
   return (
-    <section className="py-16 bg-gray-900">
+    <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-Portica mb-4 tracking-tight">
             Featured Properties
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-Portica-300 max-w-2xl mx-auto leading-relaxed">
             Discover our handpicked selection of premium properties that offer 
             exceptional value and outstanding features.
           </p>

@@ -84,20 +84,20 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-craterbrown mb-4 tracking-tight">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-craterbrown-300 max-w-2xl mx-auto leading-relaxed">
             Don&apos;t just take our word for it. Here&apos;s what our satisfied clients 
             have to say about their experience with MSBUILDER&apos;S.
           </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <Card className="overflow-hidden bg-gray-800 border-gray-200 transform transition-transform duration-300 hover:scale-105">
+          <Card className="overflow-hidden bg-akaroa border-gray-200 transform transition-transform duration-300 hover:scale-105">
             <CardContent className="p-8 md:p-12">
               <div className="text-center">
                 <Quote className="h-12 w-12 text-yellow-500 mx-auto mb-6" />
@@ -109,7 +109,7 @@ export default function TestimonialsSection() {
                     ))}
                   </div>
                   
-                  <blockquote className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                  <blockquote className="text-lg md:text-xl text-craterbrown leading-relaxed mb-8">
                     &quot;{testimonials[currentIndex].content}&quot;
                   </blockquote>
                 </div>
@@ -125,13 +125,13 @@ export default function TestimonialsSection() {
                   </div>
                   
                   <div className="text-left">
-                    <div className="font-semibold text-lg text-white">
+                    <div className="font-semibold text-lg text-craterbrown">
                       {testimonials[currentIndex].name}
                     </div>
-                    <div className="text-gray-300">
+                    <div className="text- craterbrown-300">
                       {testimonials[currentIndex].role}
                     </div>
-                    <div className="text-sm text-yellow-500">
+                    <div className="text-sm text-craterbrown-500">
                       {testimonials[currentIndex].property}
                     </div>
                   </div>

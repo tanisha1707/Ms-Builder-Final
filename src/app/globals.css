@@ -3,12 +3,12 @@
 @tailwind utilities;
 @layer base {
   :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f7e4;
+  --foreground: #281718;
   
   /* Custom Brand Colors */
-  --primary: #fbbf24; /* Yellow */
-  --primary-foreground: #000000; /* Black text on yellow */
+  --primary: #fce162; /* Yellow */
+  --primary-foreground: #281718; /* Brown text on yellow */
   --secondary: #c0c0c0; /* Silver */
   --secondary-foreground: #000000; /* Black text on silver */
   --accent: #000000; /* Black */
@@ -25,6 +25,11 @@
   --yellow-700: #b45309;
   --yellow-800: #92400e;
   --yellow-900: #78350f;
+  --Akaroa-900:#ddc8ae;
+  --CraterBrown-900:#281718;
+  --Portica-900:#fce162;
+  --CadetBlue-900:#a4acbc;
+  --Loafer-900:#f4f7e4;
   
   --silver-50: #f8f9fa;
   --silver-100: #e9ecef;

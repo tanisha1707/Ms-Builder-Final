@@ -69,17 +69,17 @@ export default function CategoriesSection() {
     <div key={category.name} className="mb-16">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
         <div>
-          <h3 className="text-2xl font-bold mb-2 flex items-center text-white">
+          <h3 className="text-2xl font-bold mb-2 flex items-center text-craterbrown">
             <span className="text-3xl mr-3 text-yellow-500">{category.icon}</span>
             {category.name} Properties
           </h3>
-          <p className="text-gray-300">{category.description}</p>
+          <p className="text-craterbrown-300">{category.description}</p>
         </div>
         
         <Button
           asChild
           variant="outline"
-          className="mt-4 md:mt-0 bg-transparent border-gray-300 text-gray-300 hover:bg-gray-200 hover:text-black transition-all duration-300 transform hover:scale-105"
+          className="mt-4 md:mt-0 bg-portica border-gray-300 text-craterbrown hover:text-black transition-all duration-300 transform hover:scale-105"
         >
           <Link href={`/categories?category=${category.name}`}>
             View All
@@ -104,9 +104,9 @@ export default function CategoriesSection() {
           ))}
         </div>
       ) : (
-        <Card className="bg-gray-800 border-gray-200">
+        <Card className=" border-cadetblue">
           <CardContent className="p-8 text-center">
-            <p className="text-gray-300">No properties available in this category</p>
+            <p className="text- craterbrown-300">No properties available in this category</p>
           </CardContent>
         </Card>
       )}
@@ -114,13 +114,13 @@ export default function CategoriesSection() {
   )
 
   return (
-    <section className="py-16 bg-gray-900">
+    <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-craterbrown mb-4 tracking-tight">
             Browse by Category
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-craterbrown-300 max-w-2xl mx-auto leading-relaxed">
             Explore our diverse range of properties across different categories 
             to find exactly what you&apos;re looking for.
           </p>

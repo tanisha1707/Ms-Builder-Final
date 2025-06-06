@@ -104,7 +104,7 @@ function PropertiesContent() {
 
   return (
     <div className="container mx-auto px-4 py-12 page-transition">
-      <section className="w-full px-6 pt-0 md:pt-0 pb-12 bg-white mb-12">
+      <section className="w-full px-6 pt-0 md:pt-0 pb-12 bg-loafer mb-12">
   <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
     
     {/* Text Content */}
